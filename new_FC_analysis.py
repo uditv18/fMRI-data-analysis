@@ -133,7 +133,7 @@ class process:
             "betweenness_centrality": nx.betweenness_centrality(G),
             "closeness_centrality": nx.closeness_centrality(G),
             "eigenvector_centrality": nx.eigenvector_centrality(G, max_iter=1000),
-            "katz_centrality": nx.katz_centrality(G, alpha=0. / max(np.linalg.eigvals(nx.to_numpy_array(G))), max_iter=1000, tol=1e-6)
+            "katz_centrality": nx.katz_centrality(G, alpha=1/ max(np.linalg.eigvals(nx.to_numpy_array(G))), max_iter=1000, tol=1e-6)
         }
         
 
